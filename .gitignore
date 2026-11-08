@@ -1,0 +1,6 @@
+# Kubeconfig files have certificates: never commit them.
+# Los kubeconfig tienen certificados: nunca se commitean.
+*kubeconfig*
+.kube/
+.env
+*.log

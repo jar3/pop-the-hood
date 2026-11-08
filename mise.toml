@@ -1,0 +1,11 @@
+# Tools for the labs, active only inside this repo.
+# Herramientas de los laboratorios, activas solo dentro de este repo.
+[tools]
+kind = "0.33.0"
+kubectl = "1.37.2"
+gitleaks = "8.30.1"
+
+[env]
+# Test clusters use their own kubeconfig, so they never touch your other contexts.
+# Los clusters de prueba usan su propio kubeconfig y no tocan tus otros contextos.
+KUBECONFIG = "{{env.HOME}}/.kube/pop-the-hood-config"

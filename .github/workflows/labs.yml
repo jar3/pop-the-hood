@@ -1,0 +1,23 @@
+# Runs every lab against a fresh kind cluster on each change.
+# Corre todos los laboratorios contra un cluster de kind nuevo con cada cambio.
+name: Labs
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  schedule:
+    - cron: "0 9 * * 1" # every Monday, to catch breakage from new versions · cada lunes
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+      - uses: jdx/mise-action@v5
+      - run: mise exec -- scripts/test-labs.sh

@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+# Blocks the commit if gitleaks finds a secret in the staged changes.
+# Frena el commit si gitleaks encuentra un secreto en lo que se va a commitear.
+if command -v gitleaks >/dev/null 2>&1; then
+  exec gitleaks git --pre-commit --staged --redact --no-banner --verbose
+elif command -v mise >/dev/null 2>&1; then
+  exec mise exec -- gitleaks git --pre-commit --staged --redact --no-banner --verbose
+fi
+echo "gitleaks not found: run 'mise install' first · no está gitleaks: corré 'mise install'" >&2
+exit 1

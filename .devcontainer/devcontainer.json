@@ -1,0 +1,8 @@
+{
+  "name": "Pop the hood",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "postCreateCommand": "curl -fsSL https://mise.run | sh && echo 'eval \"$(~/.local/bin/mise activate bash)\"' >> ~/.bashrc && ~/.local/bin/mise trust && ~/.local/bin/mise install && git config core.hooksPath .githooks"
+}

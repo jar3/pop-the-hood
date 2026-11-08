@@ -1,0 +1,31 @@
+name: Broken lab · Laboratorio roto
+description: A lab doesn't work as described · Un laboratorio no anda como dice
+labels: [broken-lab]
+body:
+  - type: input
+    id: lab
+    attributes:
+      label: Lab · Laboratorio
+      placeholder: labs/01-...
+    validations:
+      required: true
+  - type: input
+    id: step
+    attributes:
+      label: Step · Paso
+      placeholder: "3"
+    validations:
+      required: true
+  - type: textarea
+    id: error
+    attributes:
+      label: What happened · Qué pasó
+      description: Command and full error. Remove any token or password first · Comando y error completo. Sacá antes cualquier token o contraseña.
+      render: shell
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment · Entorno
+      placeholder: "Linux / macOS / Windows (WSL) / Codespaces, Docker version"
