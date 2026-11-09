@@ -1,0 +1,55 @@
+# A web server with the three probes.
+# Un servidor web con las tres probes.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: web}
+  template:
+    metadata:
+      labels: {app: web}
+    spec:
+      containers:
+        - name: web
+          image: nginx:1.29-alpine
+          # Simulates an app that takes 10 seconds to start.
+          # Simula una app que tarda 10 segundos en arrancar.
+          command: ["sh", "-c", "sleep 10 && exec nginx -g 'daemon off;'"]
+          lifecycle:
+            postStart:
+              exec:
+                # The "ready" sign the readiness probe looks for.
+                # El cartel de "listo" que busca la readiness probe.
+                command: ["sh", "-c", "echo ok > /usr/share/nginx/html/ready.html"]
+          ports:
+            - containerPort: 80
+          # Startup: "did you finish starting?" Up to 30 x 2 s = 60 s.
+          # Startup: "¿terminaste de arrancar?" Hasta 30 x 2 s = 60 s.
+          startupProbe:
+            httpGet: {path: /, port: 80}
+            periodSeconds: 2
+            failureThreshold: 30
+          # Readiness: "can you take customers?" If not, no traffic.
+          # Readiness: "¿estás para atender?" Si no, no le llega tráfico.
+          readinessProbe:
+            httpGet: {path: /ready.html, port: 80}
+            periodSeconds: 2
+            failureThreshold: 1
+          # Liveness: "are you alive?" If not, restart the container.
+          # Liveness: "¿estás vivo?" Si no, se reinicia el contenedor.
+          livenessProbe:
+            httpGet: {path: /, port: 80}
+            periodSeconds: 3
+            failureThreshold: 2
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: web
+spec:
+  selector: {app: web}
+  ports:
+    - port: 80
