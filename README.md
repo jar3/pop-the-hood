@@ -10,7 +10,7 @@
 
 | # | Lab · Laboratorio | Topic · Tema | Level · Nivel | Time · Tiempo | Post |
 |---|---|---|---|---|---|
-| 01 | [Probes: liveness, readiness and startup · Probes: liveness, readiness y startup](labs/01-probes) | Kubernetes | beginner · inicial | ~15 min | — |
+| 01 | [Probes: liveness, readiness and startup · Probes: liveness, readiness y startup](labs/01-probes) | Kubernetes | beginner · inicial | ~15 min | [LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7525698131754180608/) |
 
 Every lab follows the same structure (see [`labs/_template`](labs/_template)): the analogy, what you'll learn, the steps, how to break it on purpose, how to clean up and what you learned.
 
