@@ -1,8 +1,9 @@
 # NN · Lab title · Título del laboratorio
 
-> **Post:** link to the LinkedIn post · link al post de LinkedIn
-> **Level · Nivel:** beginner / intermediate / advanced · inicial / intermedio / avanzado
-> **Time · Tiempo:** ~15 min
+- **Post:** link to the LinkedIn post · link al post de LinkedIn
+- **Topic · Tema:** Kubernetes / SRE / observability · observabilidad / security · seguridad / architecture · arquitectura / AI · IA
+- **Level · Nivel:** beginner / intermediate / advanced · inicial / intermedio / avanzado
+- **Time · Tiempo:** ~15 min
 
 ## The analogy · La analogía
 
