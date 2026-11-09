@@ -6,4 +6,4 @@ Los textos e imágenes de este repo (READMEs, explicaciones, diagramas) tienen l
 
 The code (manifests, scripts) is under the [MIT license](LICENSE). El código (manifiestos, scripts) tiene licencia [MIT](LICENSE).
 
-Copyright (c) 2026 Jar (github.com/jar3)
+Copyright (c) 2026 Jorge Riveros (aka Jar)

@@ -75,7 +75,7 @@ git config core.hooksPath .githooks
 
 ## About · Sobre mí
 
-Made by **Jar**, SRE/DevOps engineer. Hecho por **Jar**, SRE/DevOps.
+Made by **Jorge Riveros (aka Jar)**, SRE/DevOps engineer. Hecho por **Jorge Riveros (aka Jar)**, SRE/DevOps.
 
 [LinkedIn](https://www.linkedin.com/in/riverosjorge/) · [GitHub](https://github.com/jar3)
 
