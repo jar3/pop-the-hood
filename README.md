@@ -42,6 +42,7 @@ mise trust && mise install
 
 - **kind**: Kubernetes clusters inside Docker · clusters de Kubernetes adentro de Docker.
 - **kubectl**: same version as the clusters · la misma versión que los clusters.
+- **helm**: package manager for Kubernetes · gestor de paquetes de Kubernetes.
 - **gitleaks**: secret scanner · escáner de secretos.
 
 Test clusters store their access in `~/.kube/pop-the-hood-config`, outside the repo, so they never mix with your other kubeconfig. Los clusters de prueba guardan su acceso en `~/.kube/pop-the-hood-config`, fuera del repo, y no se mezclan con tu otro kubeconfig.
