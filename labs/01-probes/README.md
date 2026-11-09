@@ -1,6 +1,6 @@
 # 01 · Probes: liveness, readiness and startup · Probes: liveness, readiness y startup
 
-- **Post:** —
+- **Post:** [LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7525698131754180608/)
 - **Topic · Tema:** Kubernetes
 - **Level · Nivel:** beginner · inicial
 - **Time · Tiempo:** ~15 min
